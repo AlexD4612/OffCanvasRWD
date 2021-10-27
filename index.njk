@@ -1,0 +1,37 @@
+{% set siteName = "Off Canvas RWD Layouts" %}
+
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage : {{ siteName }}</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">  
+  <!-- Scripts -->
+  <script defer src="script.js"></script>
+  
+</head>
+<body>
+  
+{% include "nav.njk" %}
+
+<main>
+	<a href="#" class="toggle-nav">
+  	<img src="assets/menu.svg"> Menu
+  </a>
+  
+  <article>
+    
+    <h1>{{ siteName }}</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium impedit minus vel perferendis fugit, veritatis officia eos itaque sit nesciunt tenetur ipsam labore qui nemo, delectus accusantium ducimus, enim sed.</p>
+    
+    <p>Use for all of your {{ siteName }}.</p>
+
+  </article>
+</main>
+  
+  
+</body>
+</html>
