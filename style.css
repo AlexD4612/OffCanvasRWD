@@ -1,135 +1,140 @@
 /* Stylesheet */
 
+
 /* load local font  */
+
 @font-face {
-  font-family: "IBM Plex Mono";
-  src: url(assets/ibm-plex-mono.woff2), url(assets/ibm-plex-mono.woff);
+    font-family: "IBM Plex Mono";
+    src: url(assets/ibm-plex-mono.woff2), url(assets/ibm-plex-mono.woff);
 }
 
 body {
-  /* base styling */
-  margin: 0;
-
-  /* apply local font */
-  font-family: "IBM Plex Mono";
-
-  /* typogrpahy */
-  font-size: 1.25em;
-  line-height: 1.15em;
-  overflow-x:hidden;
+    /* base styling */
+    margin: 0;
+    /* apply local font */
+    font-family: "IBM Plex Mono";
+    /* typogrpahy */
+    font-size: 1.25em;
+    line-height: 1.15em;
+    overflow-x: hidden;
 }
+
 
 /* Nav Menu */
+
 nav {
-  background: lightgray;
-  width: 300px;
-
-  /* position'ing */
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-
-  /*  alignment  */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+    background: lightgray;
+    width: 300px;
+    /* position'ing */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /*  alignment  */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
+
 
 /* Nav Links */
+
 nav a {
-  padding-top:2em;
-  color: #ffffff;
-  text-decoration: none;
-  margin: 5px 32px 5px 32px;
+    padding-top: 2em;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 5px 32px 5px 32px;
 }
+
 
 /* Main : Hide Menu */
-main {
-  position: relative;
-  z-index: 1;
-  background-color: white;
-  min-height: 100vh;
-  padding-left: 1em;
-  
 
-  /* x translate matches width of navigation */
-  transform: translate(0, 0);
-  /* animate with transition */
-  transition: transform 0.25s;
+main {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    min-height: 100vh;
+    padding-left: 1em;
+    /* x translate matches width of navigation */
+    transform: translate(0, 0);
+    /* animate with transition */
+    transition: transform 0.25s;
 }
+
 
 /* Main Content : Show Menu */
+
 main.open {
-  transform: translate(300px, 0);
-  
+    transform: translate(300px, 0);
 }
+
 
 /* Menu Button */
+
 a.toggle-nav {
-  display: inline-block;
-  padding-top: 1em;
-  text-decoration: none;
-  color: black;
+    display: inline-block;
+    padding-top: 1em;
+    text-decoration: none;
+    color: black;
 }
 
+
 /* Menu Button Icon */
+
 a.toggle-nav img {
-  vertical-align: middle;
+    vertical-align: middle;
 }
+
 
 /* Mobile 
   0 to 26em (416 pixels)
 */
+
 @media only screen and (min-width: 0) {
-  /* diagnostic styling 
+    /* diagnostic styling 
   main {
     background: red;
   } */
-
-  nav {
-    width: 50%;
-  }
-
-  main.open {
-    transform: translate(50%, 0);
-    
-  }
+    nav {
+        width: 50%;
+    }
+    main.open {
+        transform: translate(50%, 0);
+    }
 }
+
 
 /* Tablet 
   26em (416 pixels) to 72em (1,152 pixels)
 */
+
 @media only screen and (min-width: 26em) {
-  /* diagnostic styling 
+    /* diagnostic styling 
   main {
     background: green;
   } */
-
-  nav {
-    width: 33%;
-  }
-
-  main.open {
-    transform: translate(33%, 0);
-   
-  }
+    nav {
+        width: 33%;
+    }
+    main.open {
+        transform: translate(33%, 0);
+    }
 }
+
 
 /* Desktop 
    72em (1,152 pixels) to 90em (1440 pixels)
 */
+
 @media screen and (min-width: 72em) {
-  /* diagnostic styling 
+    /* diagnostic styling 
   main {
     background: blue;
   } */
-
-  nav {
-    width: 300px;
-  }
-
-  main.open {
-    transform: translate(300px, 0);
-  }
+    nav {
+        width: 300px;
+    }
+    main.open {
+        transform: translate(300px, 0);
+    }
 }
