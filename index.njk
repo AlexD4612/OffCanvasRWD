@@ -1,40 +1,48 @@
-{% set siteName = "My Project" %}
+{% set siteName = "Responsive for the Holidays" %}
+
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en">  
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage : {{ siteName }}</title>
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Scripts -->
-    <script defer src="script.js"></script>
-
+  <title>Homepage : {{ siteName }}</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">  
+  <!-- Scripts -->
+  <script defer src="script.js"></script>
+  
 </head>
-
 <body>
+  
+{% include "nav.njk" %}
 
-    {% include "nav.njk" %}
+<main>
+	<a href="#" class="toggle-nav">
+  	<img src="assets/menu.svg"> Menu
+  </a>
+  
+  <article>
+    
+    <h1>{{ siteName }}</h1>
+    <h2>  </h2>
+   
+    <p>Welcome to Responsive for the Holidays! This site demonstrates responsive web design and makes use of a top down off-canvas menu.</p>
+    <p>So how does it work exactly?</p>
+    <p>Different devices will see different holidays and respective information about it! For example, you are currently on <span class ="device">Desktop</span> so you'll see everything about <span class="holiday">Halloween.</span></p>
+    <p>To learn more about which holidays are visible on which devices, check out the media queries tab! </p>
+    
+    
 
-    <main>
-        <a href="#" class="toggle-nav">
-            <img src="assets/menu.svg"> Menu
-        </a>
-
-        <article>
-
-            <h1>{{ siteName }}</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium impedit minus vel perferendis fugit, veritatis officia eos itaque sit nesciunt tenetur ipsam labore qui nemo, delectus accusantium ducimus, enim sed.</p>
-
-            <p>Use for all of your {{ siteName }}.</p>
-
-        </article>
-    </main>
-
-
+  </article>
+  
+  {% include "footer.njk" %}
+</main>
+ 
+  
+   
 </body>
-
+  
+  
 </html>
