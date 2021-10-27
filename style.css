@@ -8,13 +8,20 @@
     src: url(assets/Comico-Regular.woff), url(assets/Comico-Regular.woff2);
 }
 
+@font-face {
+    font-family: "Chubbo Light";
+    src: url(assets/Chubbo-Light.woff), url(assets/Chubbo-Light.woff2);
+}
+
+@font-face {
+    font-family: "Zodiac Light";
+    src: url(assets/Zodiak-Light.woff), url(assets/Zodiak-Light.woff2);
+}
+
 body {
     /* base styling */
     margin: 0;
     text-align: center;
-    /* apply l0font */
-    font-family: "Comico Regular";
-    /* typogrpahy */
     overflow-x: hidden;
 }
 
@@ -102,6 +109,9 @@ a.toggle-nav img {
 */
 
 @media only screen and (min-width: 0) {
+    body {
+        font-family: "Chubbo Light";
+    }
     main {
         background: green;
         padding-bottom: 0;
@@ -143,6 +153,9 @@ a.toggle-nav img {
 */
 
 @media only screen and (min-width: 26em) {
+    body {
+        font-family: "Zodiak Light";
+    }
     main {
         background: brown;
         overflow-x: hidden;
@@ -167,7 +180,7 @@ a.toggle-nav img {
         font-size: 1em;
     }
     article p:nth-child(odd) {
-        color: yellow;
+        color: tan;
     }
     main.open {
         transform: translate(0, 7%);
@@ -180,6 +193,9 @@ a.toggle-nav img {
 */
 
 @media screen and (min-width: 72em) {
+    body {
+        font-family: "Comico Regular";
+    }
     main {
         background-image: url(assets/peakpx.jpg);
         background-size: cover;
