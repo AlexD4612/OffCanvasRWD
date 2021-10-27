@@ -2,18 +2,7 @@
 const menuButton = document.querySelector("a.toggle-nav");
 const mainContent = document.querySelector("main");
 
-// Listen for clicks on `menuButton`
-menuButton.addEventListener("click", function() {
-    // Toggle classes on `mainContent`
-    mainContent.classList.toggle("open");
 
-    // If opened, change change text
-    if (mainContent.classList.contains("open")) {
-        menuButton.innerHTML = `<img src="assets/close.svg" /> Close`;
-    } else {
-        menuButton.innerHTML = `<img src="assets/menu.svg" /> Menu`;
-    }
-});
 
 //Date info
 const curDate = new Date();
@@ -34,9 +23,10 @@ var desktop = window.matchMedia("screen and (min-width: 72em)");
 function mobileQ(mobile) {
     if (mobile.matches) {
         subtitle.innerHTML = "Christmas";
-        device.innerHTML= "Mobile";
+        device.innerHTML = "Mobile";
         holiday.innerHTML = "Christmas";
-       
+
+
 
     }
 }
@@ -44,8 +34,9 @@ function mobileQ(mobile) {
 function tabletQ(tablet) {
     if (tablet.matches) {
         subtitle.innerHTML = "Thanksgiving";
-        device.innerHTML= "Tablet";
+        device.innerHTML = "Tablet";
         holiday.innerHTML = "Thanksgiving";
+
 
     }
 }
@@ -53,8 +44,20 @@ function tabletQ(tablet) {
 function desktopQ(desktop) {
     if (desktop.matches) {
         subtitle.innerHTML = "Halloween";
-        device.innerHTML= "Desktop";
+        device.innerHTML = "Desktop";
         holiday.innerHTML = "Halloween";
+        // Listen for clicks on `menuButton`
+        menuButton.addEventListener("click", function() {
+            // Toggle classes on `mainContent`
+            mainContent.classList.toggle("open");
+
+            // If opened, change change text
+            if (mainContent.classList.contains("open")) {
+                menuButton.innerHTML = `<img src="assets/pumpkin-svgrepo-com.svg" /> Close`;
+            } else {
+                menuButton.innerHTML = `<img src="assets/pumpkin-svgrepo-com.svg" /> Menu`;
+            }
+        });
 
     }
 }
