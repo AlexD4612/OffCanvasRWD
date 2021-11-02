@@ -1,3 +1,5 @@
+{% set siteName = "Responsive for the Holidays" %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,18 +20,19 @@
 
   {% include "nav.njk" %}
   
-  <main>
-    <a href="#" class="toggle-nav">
-      <img src="assets/menu.svg"> Menu
-    </a>
+    <main>
+        <a href="#" class="toggle-nav">
+            <img src="assets/menu.svg"> Menu
+        </a>
 
-    <article>
+        <article>
 
-      <h1>Page B</h1>
-      <img src="assets/b.jpg" srcset="assets/b2x.jpg 2x" alt="b plant">
+            <h1>Traditions</h1>
+            <p class="tradition"></p>
 
-    </article>
-  </main>
+        </article>
+
+         {% include "footer.njk" %}
 
 </body>
 
